@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/harsha/ontologies/2021/1/library.owl#"
+     xml:base="http://www.semanticweb.org/harsha/ontologies/2021/1/library.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:library="http://www.semanticweb.org/harsha/ontologies/2021/1/library.owl#"
+     xmlns:library_harsha_rajiv="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl">
+        <rdfs:comment>This a ontology for Library Mangament system.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Borrow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Borrow">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isBrowsedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Browse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Browse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#onlineJournals"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Refer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Refer">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isReferedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#offlineJournals"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Return -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Return">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isReturnedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#associateWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#associateWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#hasName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#hasRollNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#hasRollNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#hasTitle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#hasTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Journals"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Journals"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isBrowsedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isBrowsedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isIssuedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isIssuedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#issue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isReferedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isReferedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isReturnedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isReturnedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isUtilizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#isUtilizedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#utilize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#issue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#issue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Librarian"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#utilize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#utilize">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryResources"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#bookId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#bookId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#bookname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#bookname">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#firstName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#lastName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#rollNo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#rollNo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#staffId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#staffId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Faculty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryResources"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#hasTitle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Faculty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Faculty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Journals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Journals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryResources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Librarian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Librarian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#PGstudent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#PGstudent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#PHDstudent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#PHDstudent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Technician -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Technician">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#UGstudent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#UGstudent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#asstLibrarian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#asstLibrarian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#generalBooks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#generalBooks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#guestUser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#guestUser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryResources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryResources"/>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#newspapers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#newspapers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryResources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#offlineJournals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#offlineJournals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Journals"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#onlineJournals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#onlineJournals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#onlineJournals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Journals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#referenceBooks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#referenceBooks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#textBooks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#textBooks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Cp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Cp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#generalBooks"/>
+        <library_harsha_rajiv:bookId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202003</library_harsha_rajiv:bookId>
+        <library_harsha_rajiv:bookname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CompetitiveProgramming</library_harsha_rajiv:bookname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#DataModelling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#DataModelling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#textBooks"/>
+        <library_harsha_rajiv:bookId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202001</library_harsha_rajiv:bookId>
+        <library_harsha_rajiv:bookname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to DataModelling</library_harsha_rajiv:bookname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#ReferencetoDataModelling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#ReferencetoDataModelling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#referenceBooks"/>
+        <library_harsha_rajiv:bookId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202002</library_harsha_rajiv:bookId>
+        <library_harsha_rajiv:bookname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ReferencetoDataModelling</library_harsha_rajiv:bookname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Books"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Journals"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#newspapers"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Faculty"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Student"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#guestUser"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Librarian"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Security"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#Technician"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#asstLibrarian"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#PGstudent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#PHDstudent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#UGstudent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#generalBooks"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#referenceBooks"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#textBooks"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryManagementPersonnel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryResources"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library_harsha_rajiv.owl#libraryUsers"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

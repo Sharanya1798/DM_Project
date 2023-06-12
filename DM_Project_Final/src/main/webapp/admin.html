@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" >
+
+    <title>Admin</title>
+    <style>
+        .mh .dropdown-menu {
+            max-height: 100px;
+        }
+        #signout {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Books Aggregator </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collaps<br/>
+    <br/>e navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Welcome Admin</a>
+                    </li>
+                </ul>
+                <a id="signout" href="signin.html" onclick="sessionStorage.clear()">Sign out</a>
+            </div>
+        </div>
+    </nav>
+
+    <form style="padding: 50px">
+    <div class="input-group mb-3">
+        <span style="margin-left: 400px"></span>
+        <button class="input-group-text" id="FileUpload"><b>Upload Ontology</b></button>
+        <input type="file" class="form-control" id="file"/>
+        <span style="margin-left: 400px"></span>
+    </div>
+</form>
+<div class="card text-center col-sm-4" style="margin-left: 35%">
+    <div class="card-header">
+        Ontologies base model and imported classes
+    </div>
+    <div class="card-body">
+            <div class="form-group">
+                <select class="form-control mh" id="d1">
+                </select>
+            </div>
+        <br>
+        Same as
+        <br>
+        <br>
+        <div class="form-group">
+            <select class="form-control mh" id="d2" >
+                <option>None</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="card-footer text-muted">
+
+    </div>
+</div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+<div class="card text-center col-sm-4" style="margin-left: 35%">
+
+    <div class="card-header">
+        Get Data properties by classes in imported ontology
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <select class="form-control mh" id="d3" onchange="getproperties()">
+            </select>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <select class="form-control mh" id="d4">
+            </select>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <div class="card text-center col-sm-4" style="margin-left: 35%">
+
+        <div class="card-header">
+            Get Data properties by classes in base ontology
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <select class="form-control mh" id="d5" onchange="baseproperties()">
+                </select>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="form-group">
+                <select class="form-control mh" id="d6">
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="card text-center col-sm-4" style="margin-left: 35%">
+
+        <div class="card-header">
+            Data Properties Mapping
+        </div>
+        <form class="ml-3 my-auto d-inline w-50" id="mappingform">
+
+        <div class="card-body">
+
+
+            <p> Select DataPropety Equivalent to : bookname </p>
+            <div class="form-group">
+                <select class="form-control mh" id="d61">
+                </select>
+            </div>
+
+            <p> Select DataPropety Equivalent to : bookid </p>
+
+            <div class="form-group">
+                <select class="form-control mh" id="d62">
+                </select>
+            </div>
+
+            <p> Select DataPropety Equivalent to : Author </p>
+
+            <div class="form-group">
+                <select class="form-control mh" id="d63">
+                </select>
+            </div>
+
+            <p> Select DataPropety Equivalent to : Edition </p>
+            <div class="form-group">
+                <select class="form-control mh" id="d64">
+                </select>
+            </div>
+
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary border-left-0" id="Adddata" type="submit">Add
+                    Books</button>
+            </div>
+
+
+
+        </div>
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="assets/js/jquery.min.js" ></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+<script src="assets/js/admin.js"></script>
+</html>

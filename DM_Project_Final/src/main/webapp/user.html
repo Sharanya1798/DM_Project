@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Books Aggregator</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+        #signout {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand bg-dark justify-content-between">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="user.html">BooksAggregator</a>
+            <form class="ml-3 my-auto d-inline w-50" id="selection-form">
+                <div class="input-group">
+                    <input type="text" class="form-control border-right-0" placeholder="Enter BookName" id="skill">
+                    <input type="text" class="form-control border-right-0" placeholder="Enter Author" id="location">
+                    <select class="form-control border-right-0" name="experience" id="experience">
+                        <option value="-1">Select Edition</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+
+                    </select>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary border-left-0" id="findJobs" type="submit">Find
+                            Books</button>
+                    </div>
+                </div>
+            </form>
+            <a id="signout" href="signin.html" onclick="sessionStorage.clear()">Sign out</a>
+        </div>
+    </nav>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Book Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Edition</th>
+            <th scope ="col">BookID</th>
+        </tr>
+        </thead>
+        <tbody id="data">
+        </tbody>
+    </table>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+<script src="assets/js/user.js"></script>
+</html>

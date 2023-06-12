@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sharanya/ontologies/2021/1/untitled-ontology-3"
+     xml:base="http://www.semanticweb.org/sharanya/ontologies/2021/1/untitled-ontology-3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DM_Ontology="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/harsha/ontologies/2021/1/library.owl#isIssuedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/harsha/ontologies/2021/1/library.owl#isIssuedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#issues"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Librarian"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Access -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Access">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#isAccessedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Customers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Resources"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#isAccessedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#isAccessedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Resources"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Customers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#issues -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#issues">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Librarian"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Department -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Department">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Employess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Domain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Domain">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Journals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Magzines"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#e-Books"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#ISBN_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#ISBN_Number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#e-Books"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Identification_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Identification_Number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Employess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Number_Of_Copies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Number_Of_Copies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Phone_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Phone_Number">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Assistent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Employess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Librarian"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Security"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Publisher -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Publisher">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Journals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Magzines"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Resources"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#fName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#fName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Assistent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Employess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Librarian"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Security"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#lName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#lName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Assistent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Employess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Librarian"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Security"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#volume -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#volume">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#e-Books"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#writer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#writer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#e-Books"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Assistent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Assistent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#B.Tech_students -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#B.Tech_students">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Employess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Employess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Customers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Journals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Journals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Librarian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Librarian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Customers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Customers">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Management"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Resources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Resources"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#M.Tech_students -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#M.Tech_students">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#MS_students -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#MS_students">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Magzines -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Magzines">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Non-Teaching_Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Non-Teaching_Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Employess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#PHD_students -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#PHD_students">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Students">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Customers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Teaching_Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Teaching_Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Employess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#e-Books -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#e-Books">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Library_Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_AI703 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_AI703">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <DM_Ontology:ISBN_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021074</DM_Ontology:ISBN_Number>
+        <DM_Ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeographicInformationSystems</DM_Ontology:Title>
+        <DM_Ontology:volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DM_Ontology:volume>
+        <DM_Ontology:writer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">john</DM_Ontology:writer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_CS605 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_CS605">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <DM_Ontology:ISBN_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20210517</DM_Ontology:ISBN_Number>
+        <DM_Ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Modeling</DM_Ontology:Title>
+        <DM_Ontology:volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</DM_Ontology:volume>
+        <DM_Ontology:writer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kris</DM_Ontology:writer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_CS712 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_CS712">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <DM_Ontology:ISBN_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20210530</DM_Ontology:ISBN_Number>
+        <DM_Ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Techno Economics</DM_Ontology:Title>
+        <DM_Ontology:volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</DM_Ontology:volume>
+        <DM_Ontology:writer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George</DM_Ontology:writer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_CS816 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_CS816">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <DM_Ontology:ISBN_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021076</DM_Ontology:ISBN_Number>
+        <DM_Ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SoftwareProductionEngineering</DM_Ontology:Title>
+        <DM_Ontology:volume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</DM_Ontology:volume>
+        <DM_Ontology:writer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murphy</DM_Ontology:writer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_CS836 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#T2_CS836">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sharanya/ontologies/2021/1/DM_Ontology#Books"/>
+        <DM_Ontology:ISBN_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20210527</DM_Ontology:ISBN_Number>
+        <DM_Ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyber Security</DM_Ontology:Title>
+        <DM_Ontology:volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</DM_Ontology:volume>
+        <DM_Ontology:writer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert</DM_Ontology:writer>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

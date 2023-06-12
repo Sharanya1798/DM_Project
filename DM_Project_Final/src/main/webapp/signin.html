@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Books Aggregator </title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <main class="form-signin">
+        <form class="form-signing" id="login-validation">
+            <img class="mb-4" src="assets/img/index.png" alt="" width="100" height="87">
+            <h1 class="h3 mb-3 fw-normal">Books Aggregator</h1>
+
+            <label for="inputEmail" class="visually-hidden">Email</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+
+            <label for="inputPassword" class="visually-hidden">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required autocomplete="off">
+
+            <button class="w-100 btn btn-lg btn-primary" id="submit-button" type="submit">Sign in</button>
+
+            <div class="alert alert-warning" id="login-alert" role="alert" style="display: none; margin-top: 20px">
+                Wrong credential!!
+            </div>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+        </form>
+    </main>
+</body>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/login_validation.js"></script>
+</html>
